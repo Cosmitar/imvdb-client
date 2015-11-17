@@ -1,0 +1,33 @@
+{
+  "name": "imvdb-client",
+  "version": "0.0.1",
+  "repository": "Cosmitar/imvdb-client",
+  "keywords": [
+    "imvdb-sdk",
+    "imvdb",
+    "es6"
+  ],
+  "dependencies": {
+    "core-js": "^1.2.0",
+    "whatwg-fetch": "^0.9.0"
+  },
+  "devDependencies": {
+    "babel": "5.8.23",
+    "babelify": "6.3.0",
+    "browser-sync": "2.9.7",
+    "browserify": "11.2.0",
+    "gulp": "latest",
+    "gulp-rename": "latest",
+    "rimraf": "2.4.3",
+    "watchify": "3.4.0",
+    "vinyl-source-stream": "1.1.0",
+    "lodash": "3.10.1"
+  },
+  "scripts": {
+    "build": "babel -d lib/ src/",
+    "prepublish": "npm run build"
+  },
+  "author": "Cosmitar",
+  "license": "MIT",
+  "main": "lib/index.js"
+}

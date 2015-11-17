@@ -1,0 +1,9 @@
+node_modules
+demo
+src
+dist
+spec
+.tmp
+.DS_Store
+npm-debug.log
+*.sublime-project

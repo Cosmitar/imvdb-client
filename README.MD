@@ -37,14 +37,15 @@ let currentPage;
 
 Video.where( 'Abba Mamma Mia', config )
     .then( page => {
-        currentPage = page;
+        //first time that I've got a page.
+        //Stores page out of this scope to access it from next-click-handler event
+        currentPage = page; 
         drawVideosList( page.elements );//draw your list here
     });
 
 let onClickNextHandler = () => {
     currentPage.next()
         .then( page => {
-            currentPage = page;
             drawVideosList( page.elements );//draw your list here
         })
 }

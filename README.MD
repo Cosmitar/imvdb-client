@@ -90,7 +90,8 @@ No more features by now until IMVDb support replies about the API development co
 Open the localhost:3000/demo/index.html and look for console.logs
 
 ##Installation
-Let me know if you'll need it, I can publish it on npm
+Let me know if you'll need it, I can publish it on npm.
+Anyway it's not recommended for production use because IMVDb API is still in beta.
 
 ##License
 MIT

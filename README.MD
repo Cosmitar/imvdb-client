@@ -51,7 +51,7 @@ let onClickNextHandler = () => {
 }
 ```
 
-*Get first video from a search and draw its artists name*
+*Get first video from a search and draw its artists*
 ```javascript
 Video.where( 'uptown funk' )
     .then( page => {
@@ -78,7 +78,7 @@ Video.where( 'Lady Marmalade', ['featured'] )
     });
 ````
 
-No more features by now until IMVDb support reply about the API develoment continuity. Many bugs arise in this client development process.
+No more features by now until IMVDb' support replies about the API development continuity. Many endpoint bugs arose in this development process.
 
 ## Development
 ```git clone git@github.com:Cosmitar/imvdb-client.git```

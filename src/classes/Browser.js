@@ -11,6 +11,7 @@ class Browser {
         this.slug = params.slug || '';
         this._config = new SearchParams;
         this._paginator = new Paginator;
+        this._paginator.browser = this;
     }
 
     set config( searchParams = {} ) {

@@ -33,19 +33,21 @@ let config = {
     per_page: 10,
     page: 2
 };
+//keep this var on a scope reachable from UI
 let currentPage;
 
 Video.where( 'Abba Mamma Mia', config )
     .then( page => {
         //first time that I've got a page.
-        //Stores page out of this scope to access it from next-click-handler event
-        currentPage = page; 
+        //store the page into a scope to access it from next-click-handler event
+        currentPage = page;
         drawVideosList( page.elements );//draw your list here
     });
 
 let onClickNextHandler = () => {
     currentPage.next()
         .then( page => {
+            //currentPage automatically updates with the last page recovered.
             drawVideosList( page.elements );//draw your list here
         })
 }
@@ -78,7 +80,7 @@ Video.where( 'Lady Marmalade', ['featured'] )
     });
 ````
 
-No more features by now until IMVDb support replies about the API development continuity. Many endpoint bugs arose in this development process.
+No more features by now until IMVDb support replies about the API development continuity. Some server-side issues arose in this development process.
 
 ## Development
 ```git clone git@github.com:Cosmitar/imvdb-client.git```
@@ -87,11 +89,10 @@ No more features by now until IMVDb support replies about the API development co
 
 ```gulp watch```
 
-Open the localhost:3000/demo/index.html and look for console.logs
+Open the localhost:3000/demo/index.html and look for console logs
 
 ##Installation
-Let me know if you'll need it, I can publish it on npm.
-Anyway it's not recommended for production use because IMVDb API is still in beta.
+IMVDb discourages production use because API is still in beta.
 
 ##License
 MIT
